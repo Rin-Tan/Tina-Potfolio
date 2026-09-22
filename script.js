@@ -82,6 +82,8 @@ const modalTitle = document.getElementById("modalTitle");
 
 const modalCategory = document.getElementById("modalCategory");
 
+const modalDescription = document.getElementById("modalDescription");
+
 const projectButtons = document.querySelectorAll(".view-project");
 
 
@@ -95,6 +97,8 @@ projectButtons.forEach(button => {
 
         const image = button.dataset.image;
 
+        const description = button.dataset.description;
+
 
         modalTitle.textContent = title;
 
@@ -103,6 +107,8 @@ projectButtons.forEach(button => {
         modalImage.src = image;
 
         modalImage.alt = title;
+
+        modalDescription.textContent = description;
 
 
         modal.classList.add("active");
