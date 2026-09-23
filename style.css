@@ -1361,15 +1361,24 @@ button {
     }
 }
 
+/* ==================================================
+   RESPONSIVE - TABLET & MOBILE
+================================================== */
 
 @media (max-width: 768px) {
+
+    /* ==================================================
+       GENERAL
+    ================================================== */
 
     .section {
         padding: 80px 0;
     }
 
 
-    /* NAV */
+    /* ==================================================
+       NAV
+    ================================================== */
 
     .menu-toggle {
         display: block;
@@ -1377,16 +1386,23 @@ button {
 
     .nav-menu {
         position: fixed;
+
         top: 0;
         right: -100%;
+
         width: 75%;
         height: 100vh;
+
         background: var(--cream);
+
         flex-direction: column;
         justify-content: center;
+
         gap: 30px;
+
         transition: var(--transition);
-        box-shadow: -10px 0 40px rgba(0,0,0,0.1);
+
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
     }
 
     .nav-menu.active {
@@ -1394,7 +1410,9 @@ button {
     }
 
 
-    /* HERO */
+    /* ==================================================
+       HERO
+    ================================================== */
 
     .hero {
         padding-top: 120px;
@@ -1413,7 +1431,7 @@ button {
     }
 
     .profile-area {
-        width: min(430px, 90%); 
+        width: min(430px, 90%);
     }
 
     .profile-image {
@@ -1429,7 +1447,9 @@ button {
     }
 
 
-    /* HEADINGS */
+    /* ==================================================
+       HEADINGS
+    ================================================== */
 
     .section-heading {
         flex-direction: column;
@@ -1438,7 +1458,9 @@ button {
     }
 
 
-    /* PROJECTS */
+    /* ==================================================
+       PROJECTS
+    ================================================== */
 
     .project-grid {
         grid-template-columns: 1fr;
@@ -1450,7 +1472,9 @@ button {
     }
 
 
-    /* ABOUT */
+    /* ==================================================
+       ABOUT
+    ================================================== */
 
     .about-grid {
         grid-template-columns: 1fr;
@@ -1465,7 +1489,9 @@ button {
     }
 
 
-    /* SERVICES */
+    /* ==================================================
+       SERVICES
+    ================================================== */
 
     .services-grid {
         grid-template-columns: 1fr;
@@ -1482,7 +1508,9 @@ button {
     }
 
 
-    /* SKILLS */
+    /* ==================================================
+       SKILLS
+    ================================================== */
 
     .skills-grid {
         grid-template-columns: 1fr;
@@ -1490,7 +1518,9 @@ button {
     }
 
 
-    /* TIMELINE */
+    /* ==================================================
+       TIMELINE
+    ================================================== */
 
     .timeline-item {
         grid-template-columns: 1fr;
@@ -1498,7 +1528,76 @@ button {
     }
 
 
-    /* FOOTER */
+    /* ==================================================
+       CTA
+    ================================================== */
+
+    .cta {
+        padding: 90px 20px;
+        text-align: center;
+    }
+
+    .cta-content {
+        display: block;
+        width: 100%;
+    }
+
+    .cta-text {
+        width: 100%;
+    }
+
+    .cta-text > span {
+        display: block;
+
+        font-size: 12px;
+        letter-spacing: 3px;
+
+        text-align: center;
+
+        margin-bottom: 20px;
+    }
+
+    .cta h2 {
+        font-size: 28px;
+        line-height: 1.3;
+
+        margin: 0 0 25px;
+    }
+
+    .cta h2 em {
+        font-size: 0.65em;
+    }
+
+    .cta p {
+        font-size: 13px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-buttons {
+        display: flex;
+
+        flex-direction: column;
+        align-items: center;
+
+        gap: 12px;
+
+        margin-top: 30px;
+    }
+
+    .cta-button {
+        width: 200px;
+
+        justify-content: center;
+
+        margin: 0;
+    }
+
+
+    /* ==================================================
+       FOOTER
+    ================================================== */
 
     .footer-grid {
         grid-template-columns: 1fr;
@@ -1511,63 +1610,50 @@ button {
 
     .footer-bottom {
         flex-direction: column;
+
         gap: 10px;
+
         text-align: center;
     }
 
+
     /* ==================================================
-    CTA - MOBILE
+       MODAL
     ================================================== */
 
-    .cta {
-        padding: 90px 20px;
+    .modal {
+        padding: 15px;
     }
 
-    .cta-content {
-        flex-direction: column;
-        gap: 45px;
-    }
-
-    .cta-text {
+    .modal-content {
         width: 100%;
+        max-height: 95vh;
     }
 
-    .cta-text > span {
-        font-size: 12px;
-        letter-spacing: 3px;
+    .modal-content > img {
+        height: 75vh;
     }
 
-    .cta h2 {
-        font-size: 28px;
-        line-height: 1.3;
+    .modal-info {
+        padding: 18px 20px 22px;
     }
 
-    .cta h2 em {
-        font-size: 0.65em;
-    }
-
-    .cta p {
-        font-size: 13px;
-    }
-
-    .cta-logo {
-        width: 140px;
-        height: 140px;
-    }
-
-    .contact-buttons {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .cta-button {
-        width: 200px;
+    .modal-info h2 {
+        font-size: 26px;
     }
 
 }
 
 
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
 @media (max-width: 480px) {
+
+    /* ==================================================
+       HERO
+    ================================================== */
 
     .hero h1 {
         font-size: 58px;
@@ -1598,9 +1684,19 @@ button {
         width: 78%;
     }
 
+
+    /* ==================================================
+       PROJECTS
+    ================================================== */
+
     .project-image {
         height: 300px;
     }
+
+
+    /* ==================================================
+       ABOUT
+    ================================================== */
 
     .about-details {
         grid-template-columns: 1fr;
@@ -1610,17 +1706,55 @@ button {
         margin-left: 0;
     }
 
+
+    /* ==================================================
+       CTA
+    ================================================== */
+
     .cta {
-        padding: 100px 0;
+        padding: 80px 20px;
+    }
+
+    .cta-text > span {
+        font-size: 11px;
+        letter-spacing: 2.5px;
     }
 
     .cta h2 {
         font-size: 25px;
+        line-height: 1.35;
     }
 
-    .modal {
-        padding: 15px;
+    .cta h2 em {
+        font-size: 0.65em;
     }
+
+    .cta p {
+        font-size: 12px;
+    }
+
+    .cta-button {
+        width: 190px;
+        padding: 13px 20px;
+    }
+
+
+    /* ==================================================
+       MODAL
+    ================================================== */
+
+    .modal {
+        padding: 10px;
+    }
+
+    .modal-content > img {
+        height: 70vh;
+    }
+
+    .modal-info h2 {
+        font-size: 23px;
+    }
+
 }
    
     /* ==================================================
