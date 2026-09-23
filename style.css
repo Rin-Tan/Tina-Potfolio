@@ -516,10 +516,13 @@ button {
 
 .section-heading {
     display: flex;
-    justify-content: space-between;
-    align-items: end;
+    align-items: flex-start;
     margin-bottom: 65px;
     gap: 50px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
 }
 
 .section-number {
@@ -528,8 +531,8 @@ button {
     color: var(--brown-light);
     font-size: 14px;
     letter-spacing: 3px;
-    margin-bottom: 70px;
-    margin-right: 85%;
+    margin-bottom: 0px;
+    margin-right: 0%;
     
 }
 
@@ -653,6 +656,10 @@ button {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 55px 25px;
+}
+
+.section-project-heading h2{
+    font-size: 50px;
 }
 
 .project-card {
@@ -1128,74 +1135,109 @@ button {
 
 
 /* ==================================================
-   MODAL
+   PROJECT MODAL
 ================================================== */
 
 .modal {
     position: fixed;
     inset: 0;
-    background: rgba(24, 7, 9, 0.9);
+
+    background: rgba(24, 7, 9, 0.95);
+
     z-index: 1000;
+
     display: none;
     align-items: center;
     justify-content: center;
-    padding: 30px;
+
+    padding: 20px;
 }
 
 .modal.active {
     display: flex;
 }
 
+/* Modal container */
 .modal-content {
-    background: var(--cream);
-    width: min(1000px, 100%);
-    max-height: 90vh;
-    overflow-y: auto;
     position: relative;
+
+    width: min(1200px, 95vw);
+    max-height: 95vh;
+
+    background: var(--cream);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
 }
 
+/* Full project image */
 .modal-content > img {
-    max-height: 65vh;
-    object-fit: cover;
+    width: 100%;
+    height: 78vh;
+
+    object-fit: contain;
+    object-position: center;
+
+    display: block;
+
+    background: #1a0b0d;
 }
 
+/* Title
 .modal-info {
-    padding: 30px;
-}
+    padding: 20px 30px 25px;
 
-.modal-info > span {
-    font-size: 10px;
-    color: var(--brown-light);
-    letter-spacing: 2px;
-}
+    text-align: center;
 
+    background-color: #1a0b0d;
+} */
+/* 
 .modal-info h2 {
     font-family: var(--serif);
-    font-size: 42px;
+
+    font-size: 32px;
     font-weight: 500;
-    margin: 5px 0 10px;
-}
 
-.modal-info p {
-    font-size: 13px;
-    color: #755d58;
-}
+    color: var(--cream);
 
+    margin: 0;
+} */
+
+/* Close button */
 .modal-close {
     position: absolute;
+
     top: 15px;
     left: 15px;
+
     width: 40px;
     height: 40px;
+
     border: none;
+
     background: var(--burgundy);
     color: white;
+
     font-size: 28px;
     line-height: 1;
+
     cursor: pointer;
-    z-index: 2;
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s ease;
 }
 
+.modal-close:hover {
+    transform: scale(1.05);
+}
 
 /* ==================================================
    RESPONSIVE

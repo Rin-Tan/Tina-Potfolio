@@ -73,48 +73,31 @@ filterButtons.forEach(button => {
 ================================================== */
 
 const modal = document.getElementById("projectModal");
-
 const modalClose = document.getElementById("modalClose");
 
 const modalImage = document.getElementById("modalImage");
-
-const modalTitle = document.getElementById("modalTitle");
-
-const modalCategory = document.getElementById("modalCategory");
-
-const modalDescription = document.getElementById("modalDescription");
+// const modalTitle = document.getElementById("modalTitle");
 
 const projectButtons = document.querySelectorAll(".view-project");
 
+
+/* Open modal */
 
 projectButtons.forEach(button => {
 
     button.addEventListener("click", () => {
 
         const title = button.dataset.title;
-
-        const category = button.dataset.category;
-
         const image = button.dataset.image;
 
-        const description = button.dataset.description;
-
-
-        modalTitle.textContent = title;
-
-        modalCategory.textContent = category;
+        // modalTitle.textContent = title;
 
         modalImage.src = image;
-
         modalImage.alt = title;
-
-        modalDescription.textContent = description;
-
 
         modal.classList.add("active");
 
         document.body.style.overflow = "hidden";
-
     });
 
 });
@@ -127,9 +110,10 @@ function closeModal() {
     modal.classList.remove("active");
 
     document.body.style.overflow = "";
-
 }
 
+
+/* Close button */
 
 modalClose.addEventListener("click", closeModal);
 
@@ -154,7 +138,6 @@ document.addEventListener("keydown", event => {
     }
 
 });
-
 
 /* ==================================================
    SCROLL REVEAL
