@@ -75,78 +75,6 @@ button {
 }
 
 
-/* ==================================================
-   NAVBAR
-================================================== */
-
-.navbar {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    right: 0;
-    z-index: 100;
-    padding: 28px 0;
-}
-
-.nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    font-family: var(--serif);
-    font-size: 28px;
-    letter-spacing: 4px;
-    font-weight: 600;
-}
-
-.logo span {
-    color: var(--brown-light);
-}
-
-.nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 42px;
-}
-
-.nav-menu a {
-    font-size: 13px;
-    letter-spacing: 0.5px;
-    position: relative;
-}
-
-.nav-menu a::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: -7px;
-    width: 0;
-    height: 1px;
-    background: var(--burgundy);
-    transition: var(--transition);
-}
-
-.nav-menu a:hover::after {
-    width: 100%;
-}
-
-.menu-toggle {
-    display: none;
-    border: 0;
-    background: transparent;
-    cursor: pointer;
-}
-
-.menu-toggle span {
-    display: block;
-    width: 26px;
-    height: 2px;
-    background: var(--burgundy);
-    margin: 5px;
-}
-
 
 /* ==================================================
    HERO
@@ -177,11 +105,6 @@ button {
     gap: 80px;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
 .eyebrow {
     font-size: 12px;
     letter-spacing: 4px;
@@ -189,32 +112,6 @@ button {
     margin-bottom: 25px;
 }
 
-.hero h1 {
-    font-family: var(--serif);
-    font-size: clamp(70px, 8vw, 80px);
-    line-height: 0.9;
-    font-weight: 400;
-    letter-spacing: -3px;
-    margin-bottom: 40px;
-}
-
-.hero h1 span {
-    color: var(--brown);
-    font-style: italic;
-}
-
-.hero-description {
-    max-width: 510px;
-    font-size: 15px;
-    color: #654b46;
-    margin-bottom: 40px;
-}
-
-.hero-buttons {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
 
 .btn {
     padding: 13px 27px;
@@ -239,28 +136,6 @@ button {
 .btn-outline:hover {
     background: var(--burgundy);
     color: var(--cream);
-}
-
-.hero-meta {
-    display: flex;
-    gap: 50px;
-    margin-top: 65px;
-}
-
-.hero-meta div {
-    display: flex;
-    flex-direction: column;
-}
-
-.hero-meta strong {
-    font-family: var(--serif);
-    font-size: 34px;
-    font-weight: 500;
-}
-
-.hero-meta span {
-    font-size: 11px;
-    color: var(--brown-light);
 }
 
 /* ==================================================
@@ -822,31 +697,6 @@ button {
     margin-bottom: 15px;
 }
 
-.about-details {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    border-top: 1px solid rgba(255,255,255,0.2);
-    margin-top: 45px;
-}
-
-.about-details div {
-    padding: 20px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    display: flex;
-    justify-content: space-between;
-    margin-left: 30px;
-}
-
-.about-details span {
-    color: #b9968b;
-    font-size: 11px;
-}
-
-.about-details strong {
-    font-size: 13px;
-    font-weight: 400;
-}
-
 
 /* ==================================================
    SERVICES
@@ -918,58 +768,6 @@ button {
     left: 30px;
     font-size: 25px;
 }
-
-
-/* ==================================================
-   SKILLS
-================================================== */
-/* 
-.skills-grid {
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: 120px;
-}
-
-.skills h2 {
-    margin-bottom: 30px;
-}
-
-.skills > .container > div:first-child p {
-    color: #755d58;
-    max-width: 400px;
-    font-size: 13px;
-}
-
-.skills-list {
-    padding-top: 20px;
-}
-
-.skill {
-    margin-bottom: 30px;
-}
-
-.skill-top {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 9px;
-    font-size: 13px;
-}
-
-.skill-top span:last-child {
-    color: var(--brown-light);
-}
-
-.skill-bar {
-    height: 2px;
-    background: var(--cream-dark);
-}
-
-.skill-bar span {
-    height: 100%;
-    background: var(--burgundy);
-    display: block;
-} */
-
 
 /* ==================================================
    EXPERIENCE
@@ -1081,33 +879,6 @@ button {
 
 .contact-email {
     margin-top: 15px !important;
-}
-
-
-/* ==================================================
-   CTA LOGO
-================================================== */
-
-.cta-logo {
-    flex-shrink: 0;
-
-    width: 300px;
-    height: 300px;
-
-    border-radius: 50%;
-
-    overflow: hidden;
-
-    border: 2px solid #c8a99e;
-}
-
-.cta-logo img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
 }
 
 
@@ -1408,43 +1179,6 @@ button {
         right: 0;
     }
 
-
-    /* ==================================================
-       HERO
-    ================================================== */
-
-    .hero {
-        padding-top: 120px;
-    }
-
-    .hero-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-content {
-        order: 1;
-    }
-
-    .hero-image {
-        order: 0;
-    }
-
-    .profile-area {
-        width: min(430px, 90%);
-    }
-
-    .profile-image {
-        width: 76%;
-    }
-
-    .hero h1 {
-        font-size: clamp(60px, 18vw, 90px);
-    }
-
-    .hero-meta {
-        margin-top: 45px;
-    }
-
     /* ==================================================
     PROFILE CAPTION - MOBILE
     ================================================== */
@@ -1525,16 +1259,6 @@ button {
 
     .service-card:first-child {
         border-top: none;
-    }
-
-
-    /* ==================================================
-       SKILLS
-    ================================================== */
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
     }
 
 
